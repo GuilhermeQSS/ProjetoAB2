@@ -8,6 +8,23 @@ body
     background-color: black;
     color: white;
 }
+body > div
+{
+    background-image: url(evo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 200px;
+}
+body > div > div
+{
+    font-size: 30px;
+    padding: 20px;
+    backdrop-filter: blur(3px);
+    border-top:8px solid red;
+    transform: skew(-10deg);
+    background-image: linear-gradient(rgba(96, 0, 0, 0.9),rgba(0, 0, 0,0.1))
+}
 header
 {
     display: flex;
@@ -27,6 +44,7 @@ header > div
     transform: skew(-15deg);
     align-items: center;
     font-weight:900;
+    justify-content: space-around;
 }
 header > div > a
 {
@@ -36,6 +54,17 @@ header > div > a
     padding: 20px;
     border: 1px red solid;
     background-color: rgb(92, 0, 0);
+}
+header > div > div
+{
+    border-top: 1px red solid;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-size: 20px;
+    width: 48%;
+    height: 100%;
+    background-image: linear-gradient(rgb(82, 0, 0),rgb(30, 30, 30));
 }
 article
 {
@@ -50,6 +79,7 @@ article > div
     margin: 70px 0px;
     display: flex;
     width: 100%;
+    height: 350px;
     justify-content: space-between;
     transform: skew(-10deg);
 }
@@ -70,19 +100,19 @@ article > div > div > h1
 {
     font-weight:900;
     border-left: 10px red solid;
-    background-color: rgb(92, 0, 0);
+    background-image: linear-gradient(to right,rgb(60, 0, 0),rgb(92, 0, 0),rgb(92, 0, 0));
     padding: 20px;
 }
-article > div > div > p
+article > div > div > div
 {
     text-align: justify;
     overflow-y: scroll;
     line-height: 1.5;
     border-left: 10px red solid;
     border-bottom: 5px red solid;
-    background-color: rgb(92, 0, 0);
-    padding: 20px;
-    height: 50%;
+    background-image: linear-gradient(rgb(92, 0, 0),rgb(72, 0, 0));
+    padding: 0 20px;
+    height: 60%;
     font-size:larger;
 }
 footer
