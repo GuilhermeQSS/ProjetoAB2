@@ -15,9 +15,46 @@
             <div>Campeonato de jogos em Presidente Prudente</div>
         </div>
         <div>
-            <a href="#inscricao">Inicio</a>
+            <a href="PaginaInicial.html">Inicio</a>
         </div>
     </header>
-
+    <div>
+        <div>
+            <h1>Inscrição</h1>
+            <p>
+                Aqui voce pode se inscrever para o jogo que quiser
+            </p>
+        </div>
+    </div>
+        <div>
+            <div id="sobre">
+                <h1>Inscreva-se</h1>
+                <p>
+                    <input type="file" accept="image/*" name="arquivos" id="inputArquivo" />
+                <img id="imagemPrev" src="" alt="Pré-visualização" style="display: none; max-width: 300px; margin-top: 10px;"/>
+            
+                <script>
+                    const inputArquivo = document.getElementById('inputArquivo');
+                    const imagemPrev = document.getElementById('imagemPrev');
+            
+                    inputArquivo.addEventListener('change', function() {
+                        const arquivo = inputArquivo.files[0];
+                        if (arquivo) {
+                            const leitor = new FileReader();
+                            leitor.onload = function(e) {
+                                imagemPrev.src = e.target.result;
+                                imagemPrev.style.display = 'block';
+                            };
+                            leitor.readAsDataURL(arquivo);
+                        } else {
+                            imagemPrev.style.display = 'none';
+                        }
+                    });
+                </script>
+                </p>
+                <div>
+                    
+                </div>
+            </div>
 </body>
 </html>
