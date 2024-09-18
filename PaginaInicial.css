@@ -127,8 +127,11 @@ footer
     padding-left: 30px;
 }
 /*animacoes*/
+.i-aumenta0 {transition: transform 0.3;}
+.i-aumenta0:hover {transform: scale(1.035);}
+
 .i-aumenta1 {transition: transform 0.3;}
-.i-aumenta1:hover {transform: scale(1.05);}
+.i-aumenta1:hover {transform: scale(1.054);}
 
 .i-aumenta2 {transition: transform 0.3;}
 .i-aumenta2:hover {transform: scale(1.10);}
