@@ -1,0 +1,75 @@
+html
+{
+    scroll-behavior:smooth;
+}
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    color: white;
+    background-image: url("seila.gif");
+    background-size: 100%;
+}
+header
+{
+    border-bottom: 3px green dotted;
+    background-color: black;
+    padding: 8px;
+    display: flex;
+    justify-content:space-around;
+}
+.imagem
+{
+    align-items: center;
+    width: 548px;
+    flex-wrap: wrap;
+    display: flex;
+}
+.categorias
+{
+    width: 800px;
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+}
+.categorias a
+{
+    text-decoration: none;
+    color: green;
+    border-radius: 30px;
+    border: 7px green solid;
+    font-size: large;
+    padding: 20px;
+}
+article
+{
+    background-color: black;
+    margin: 0px 100px;
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+article > div
+{
+    margin: 40px;
+    padding: 20px 30px;
+    border-radius: 60px;
+    border-top-left-radius: 0px;
+    border: 10px green solid;
+    border-left: 2px green solid;
+    border-top: 2px green solid;
+}
+article > div > p
+{
+    line-height: 30px;
+    display: inline-block;
+    text-align: justify;
+    text-indent: 10px;
+    font-size: 20px;
+    padding: 10px;
+    width: 50%;
+    border-top: 2px green solid;
+    border-right: 2px green solid;
+}
