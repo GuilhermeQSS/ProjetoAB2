@@ -2,59 +2,65 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=q, initial-scale=1.0">
-    <link rel="stylesheet" href="PaginaInicial.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PaginaInscricao.css">
     <link rel="icon" href="Icon.png">
-    <title>HellForge-TeamLeagues</title>
+    <title>Inscrição - HellForge-TeamLeagues</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="logo" style="height: 100%;background-image: linear-gradient(rgb(92, 0, 0),rgb(30, 30, 30)); border-radius: 15px;">
+
         <div>
-            <div>HellForge-TeamLeagues</div>
-            <div>Campeonato de jogos em Presidente Prudente</div>
-        </div>
-        <div>
-            <a href="PaginaInicial.html">Inicio</a>
+            <div>                <img src="LogoNova.png" alt="logo" style="height: auto; width: 135px;" class="i-aumenta0"></div>
+            <div>Inscreva-se para o campeonato</div>
         </div>
     </header>
+    
     <div>
         <div>
             <h1>Inscrição</h1>
-            <p>
-                Aqui voce pode se inscrever para o jogo que quiser
-            </p>
+            <p>Preencha os dados necessários para a inscrição:</p>
+            <form>
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto" accept="image/*" onchange="aparecerimagem(event)"><br><br>
+                <img id="preview" style="display:none; width:200px; height:auto;" alt="Preview da imagem"><br>
+
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required><br><br>
+
+                <label for="email">Endereço de e-mail:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="equipe">Equipe:</label>
+                <input type="text" id="equipe" name="equipe" required><br><br>
+
+                <label for="redes">Link para redes sociais:</label>
+                <input type="url" id="redes" name="redes"><br><br>
+
+                <label for="ids">IDs de jogo:</label>
+                <input type="text" id="ids" name="ids" required><br><br>
+
+                <label for="comprovante">Comprovantes de pagamento da taxa:</label>
+                <input type="file" id="comprovante" name="comprovante" accept="image/*" required><br><br>
+
+                <button type="submit">Enviar Inscrição</button>
+            </form>
         </div>
     </div>
-        <div>
-            <div id="sobre">
-                <h1>Inscreva-se</h1>
-                <p>
-                    <input type="file" accept="image/*" name="arquivos" id="inputArquivo" />
-                <img id="imagemPrev" src="" alt="Pré-visualização" style="display: none; max-width: 300px; margin-top: 10px;"/>
-            
-                <script>
-                    const inputArquivo = document.getElementById('inputArquivo');
-                    const imagemPrev = document.getElementById('imagemPrev');
-            
-                    inputArquivo.addEventListener('change', function() {
-                        const arquivo = inputArquivo.files[0];
-                        if (arquivo) {
-                            const leitor = new FileReader();
-                            leitor.onload = function(e) {
-                                imagemPrev.src = e.target.result;
-                                imagemPrev.style.display = 'block';
-                            };
-                            leitor.readAsDataURL(arquivo);
-                        } else {
-                            imagemPrev.style.display = 'none';
-                        }
-                    });
-                </script>
-                </p>
-                <div>
-                    
-                </div>
-            </div>
+    
+    <footer>
+        <img src="Icon.png" alt="logo" class="i-aumenta0">
+    </footer>
+
+    <script>
+        function aparecerimagem(event) {
+            const preview = document.getElementById('preview');
+            preview.src = URL.createObjectURL(event.target.files[0]);
+            preview.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
