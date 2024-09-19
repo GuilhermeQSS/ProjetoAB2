@@ -23,7 +23,7 @@ body > div > div
     backdrop-filter: blur(3px);
     border-top:8px solid red;
     transform: skew(-10deg);
-    background-image: linear-gradient(rgba(96, 0, 0, 0.9),rgba(0, 0, 0,0.1))
+    background-image: linear-gradient(rgba(96, 0, 0, 0.9),rgba(0, 0, 0,0.1));
 }
 header
 {
@@ -93,8 +93,14 @@ article > div > div
 }
 article > div > img
 {
+    background-image: linear-gradient(to right,rgb(96, 0, 0),rgba(0, 0, 0, 0));
     border-left: 10px red solid;
     width: 45%;
+}
+.jogo
+{
+    border: none;
+    width: 10%;
 }
 article > div > div > h1
 {
@@ -122,16 +128,6 @@ footer
     height: 100px;
     background-color: rgb(20, 20, 20);
 }
-.linkinsc{
-    color: gold;
-    padding-left: 30px;
-}
 /*animacoes*/
-.i-aumenta0 {transition: transform 0.3;}
-.i-aumenta0:hover {transform: scale(1.035);}
-
-.i-aumenta1 {transition: transform 0.3;}
-.i-aumenta1:hover {transform: scale(1.054);}
-
-.i-aumenta2 {transition: transform 0.3;}
-.i-aumenta2:hover {transform: scale(1.10);}
+.clickable{transition: transform 0.3s;}
+.clickable:hover{transform: scale(1.05);}
